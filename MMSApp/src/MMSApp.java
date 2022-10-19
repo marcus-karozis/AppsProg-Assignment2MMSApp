@@ -15,9 +15,9 @@ public class MMSApp extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        stage.getIcons().add(new Image("view/book.png"));
+        stage.getIcons().add(new Image("view/img/book.png"));
         stage.setX(ViewLoader.X);
         stage.setY(ViewLoader.Y);
-        ViewLoader.showStage(new Session(), "/view/session.fxml", "MMS - SuperMarket Mode", stage);
+        ViewLoader.showStage(new Session(), "/view/SuperMarket.fxml", "MMS - SuperMarket Mode", stage);
     }
 }
