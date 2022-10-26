@@ -11,7 +11,7 @@
 <?import javafx.scene.image.* ?>
 
 <VBox styleClass="background" prefHeight="300.0" prefWidth="700.0" spacing="10"  
-      xmlns:fx="http://javafx.com/fxml/1">
+      fx:controller="controller.SessionController" xmlns:fx="http://javafx.com/fxml/1">
     
     <ImageView pickOnBounds="true" preserveRatio="true" layoutX="0" layoutY="0" fitHeight="224.0" fitWidth="400.0">
         <image>
@@ -22,10 +22,13 @@
     <Label text="Membership Management System" styleClass="label"/>
 
     <HBox spacing="10" alignment="center">
-        <Button text="Login" styleClass="button"/>
-        <Button text="Exit" styleClass="button"/>
+        <Button text="Login" styleClass="button" onAction="#login"/>
+        <Button text="Exit" styleClass="button" onAction="#exit"/>
     </HBox>
 
+    <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+    </padding>
     <stylesheets>
         <URL value="@mmsfx.css"/>
     </stylesheets>

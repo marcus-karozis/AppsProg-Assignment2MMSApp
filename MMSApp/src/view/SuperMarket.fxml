@@ -3,11 +3,50 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.* ?>
+<?import javafx.scene.layout.* ?>
+<?import javafx.scene.control.* ?>
+<?import javafx.scene.text.* ?>
+<?import javafx.geometry.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1"
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SuperMarketController"
       alignment="center"
       spacing="10" styleClass="background" prefHeight="500.0" prefWidth="700.0">
 
+      <HBox alignment="CENTER_LEFT">
+            <Label text="Filters" styleClass="label-h2"/>
+      </HBox>
+
+      <HBox alignment="CENTER" spacing="10">
+            <Label text="Name:" styleClass="label-opac"/>
+            <TextField fx:id="nameFilterTf" text="" promptText="Filter by name"/>
+            <Label text="Email:" styleClass="label-opac"/>
+            <TextField fx:id="emailFilterTf" text="" promptText="Filter by email"/>
+      </HBox>
+      <Separator />
+      <TableView fx:id="smTable" styleClass="table-view" >
+            <placeholder><Label text="No memberships"/></placeholder>
+            <columns>
+                  <TableColumn text="Name" fx:id="nameClm" styleClass="column"/>
+                  <TableColumn text="Email" fx:id="emailClm" styleClass="column"/>
+                  <TableColumn text="Phone" fx:id="phoneClm" styleClass="column"/>
+            </columns>
+      </TableView>
+      <Separator />
+      <HBox alignment="CENTER" spacing="10">
+            <Button text="Add" styleClass="button" onAction="#add"/>
+            <Button fx:id="deleteBtn" text="Delete" styleClass="button" disable="true" onAction="#delete"/>
+            <Button fx:id="selectBtn" text="Select" styleClass="button" disable="true" onAction="#select"/>
+            <Button fx:id="slipBtn" text="SLIP" styleClass="button" disable="true" onAction="#slip"/>
+            <Button text="Report" styleClass="button" onAction="#report"/>
+            <Button text="Close" styleClass="button" onAction="#close"/>
+      </HBox>
+
+      <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+      </padding>
+
+      <stylesheets>
+        <URL value="@mmsfx.css"/>
+      </stylesheets>
 </VBox>

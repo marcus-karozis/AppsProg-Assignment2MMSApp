@@ -8,24 +8,24 @@
 <?import javafx.scene.text.* ?>
 <?import javafx.geometry.Insets?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml/1"
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MMSLoginController"
           alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="300.0" prefWidth="400.0">	
 
-    <Label text="Login" styleClass="label-header" 
+    <Label text="Login" styleClass="label-h2" 
         GridPane.columnIndex="0"
         GridPane.rowIndex="0"/>
 
     <Label text="Email:" styleClass="label"
         GridPane.columnIndex="0"
         GridPane.rowIndex="1"/>
-    <TextField
+    <TextField fx:id="usrTf"
         GridPane.columnIndex="1"
         GridPane.rowIndex="1"
         GridPane.columnSpan="3"/>
     <Label text="Password:" styleClass="label"
         GridPane.columnIndex="0"
         GridPane.rowIndex="2"/>
-    <TextField
+    <PasswordField fx:id="passTf"
         GridPane.columnIndex="1"
         GridPane.rowIndex="2"
         GridPane.columnSpan="3"/>
@@ -34,7 +34,7 @@
         GridPane.columnSpan="4"
         GridPane.rowIndex="3">
         
-        <Label text="Incorrect login details" styleClass="label-error"/>
+        <Label text="Incorrect login details" styleClass="label-error" fx:id="errorLbl"/>
     </HBox>
 
     <HBox alignment="CENTER_RIGHT" spacing="10"
@@ -42,9 +42,14 @@
         GridPane.columnIndex="1"
         GridPane.columnSpan="2">
         
-        <Button text="Ok" styleClass="button"/>
-        <Button text="Cancel" styleClass="button"/>
+        <Button text="Ok" styleClass="button" onAction="#ok"/>
+        <Button text="Cancel" styleClass="button" onAction="#cancel"/>
     </HBox>
+
+    <padding>
+        <Insets top="10" bottom="10" left="5" right="5" />
+    </padding>
+
     <stylesheets>
         <URL value="@mmsfx.css"/>
     </stylesheets>

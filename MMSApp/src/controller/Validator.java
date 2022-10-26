@@ -20,7 +20,7 @@ public class Validator{
     public boolean validate(String pattern, String input) {
         Pattern regEx = Pattern.compile(pattern);
         Matcher match = regEx.matcher(input);
-        return match.matches();
+        return ((match.matches()) && (!isEmpty(input)));
     }
     
     public boolean isEmpty(String input) {

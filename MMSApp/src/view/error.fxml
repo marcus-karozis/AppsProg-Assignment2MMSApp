@@ -3,12 +3,25 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.* ?>
+<?import javafx.scene.layout.* ?>
+<?import javafx.scene.control.* ?>
+<?import javafx.scene.text.* ?>
+<?import javafx.geometry.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1"
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ErrorController"
       alignment="center"
       styleClass="background" spacing="10" prefHeight="300.0" prefWidth="350.0">
+      <Label text="Form Validation Error" styleClass="label-opac"/>
+      <Label fx:id="errorLbl" styleClass="label-opac"/>
+      <Button text="Okay" styleClass="button" onAction="#okay"/>
 
+      <padding>
+            <Insets top="10" bottom="10" left="5" right="5" />
+      </padding>
+
+      <stylesheets>
+            <URL value="@mmsfx.css"/>
+      </stylesheets>
 </VBox>
 
