@@ -1,16 +1,10 @@
 package controller;
 
-import java.io.Console;
 import au.edu.uts.ap.javafx.Controller;
 import au.edu.uts.ap.javafx.ViewLoader;
 
-import javafx.application.*;
-import javafx.geometry.Insets;
-import javafx.scene.*;
-import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.text.*;
 import javafx.stage.*;
 import model.*;
 import javafx.fxml.*;

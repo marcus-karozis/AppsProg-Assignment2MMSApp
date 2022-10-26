@@ -2,20 +2,12 @@ package controller;
 
 import java.text.DecimalFormat;
 import java.text.*;
-import java.util.*;
 import au.edu.uts.ap.javafx.Controller;
 
-import javafx.geometry.Insets;
-import javafx.scene.*;
-import javafx.scene.layout.*;
-import javafx.scene.control.*;
 import javafx.scene.text.*;
 import model.MMSreport;
-import model.Membership;
-import model.SuperMarket;
 import javafx.fxml.*;
 import javafx.event.*;
-import javafx.stage.*;
 
 public class MMSlipController extends Controller<MMSreport>
 {

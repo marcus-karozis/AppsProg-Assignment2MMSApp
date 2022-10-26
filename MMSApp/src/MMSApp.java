@@ -18,6 +18,6 @@ public class MMSApp extends Application {
         stage.getIcons().add(new Image("view/img/book.png"));
         stage.setX(ViewLoader.X);
         stage.setY(ViewLoader.Y);
-        ViewLoader.showStage(new Session(), "/view/Session.fxml", "MMS - SuperMarket Mode", stage);
+        ViewLoader.showStage(new Session(), "/view/session.fxml", "MMS - SuperMarket Mode", stage);
     }
 }

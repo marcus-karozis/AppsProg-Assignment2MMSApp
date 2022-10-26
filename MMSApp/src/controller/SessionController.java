@@ -1,17 +1,10 @@
 package controller;
 
-import java.util.logging.LogManager;
-import com.apple.eawt.Application;
 import au.edu.uts.ap.javafx.Controller;
 import au.edu.uts.ap.javafx.ViewLoader;
 
 import javafx.application.*;
-import javafx.geometry.Insets;
-import javafx.scene.*;
-import javafx.scene.layout.*;
-import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.text.*;
 import model.*;
 import javafx.stage.*;
 import javafx.fxml.*;
